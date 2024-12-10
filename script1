@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#This sctipt for deleting the old file if we have a file.
+#check script arguments
+if [ $# -ne 2 ]
+then
+	echo "2 arguments are neede, old file name and new file name"
+	exit 1
+
+fi	
+
+#check of file exists
+if [ ! -f "$1" ]
+then
+	echo "Errorr! $1 does not exist or not a filee"
+	exit 1
+fi
+
+
+
+if cp $1 $2 && rm -f $1
+then
+	echo "file $1 was renamed to $2"
+	exit 0
+else 
+	echo "Error! Something went wrong"
+fi
+

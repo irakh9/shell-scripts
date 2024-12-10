@@ -1,0 +1,16 @@
+#!/bin/bash
+#script for entering the username and Password
+read -p  "Please enter a username : " username
+if [ "$username" = "Anna"  ]
+then 
+	read -s -p "Please enter password: " password
+	if [ "$password" = "123" ]
+	then 
+		echo "Welcome, $username!"
+	else 
+		echo "Invailid password!"
+		exit 1
+	fi	
+else
+	echo "Invailid username!"
+fi

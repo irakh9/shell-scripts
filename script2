@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#check if it's New Year's eve
+today=$(date +' %d - %m')
+
+
+if [ $today = 31-12 ] 
+then
+	echo "Happy new year"
+elif [ $today = 20-11 ]
+then
+	echo "Happy wendsday"
+	
+else 
+	echo "Today is $today"
+
+fi

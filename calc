@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+read -p "Enter first value: " x
+read -p "Enter second value " y
+read -p "Enter action Symbol " operator
+
+
+case $operator in 
+"+") echo " $x + $y =" $(expr "$x" + "$y");;
+"*") echo " $x * $y =" $(expr "$x" \* "$y");;
+"*") echo "unknown operation!"
+esac
+
